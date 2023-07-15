@@ -1,0 +1,44 @@
+---
+alphaVantageApiKey: "FOOBARBAZFOOFOOO"
+outputFilename: "output/investments.csv"
+accounts:
+  - name: Example Brokerage
+    balance: 1000
+    strategy: Main
+  - name: Example IRA
+    balance: 5000
+    strategy: Main
+  - name: Cash Reserve
+    balance: 1000
+    strategy: Money Market
+strategies:
+  - name: Main
+    symbols:
+      - symbol: SCHA
+        type: small
+      - symbol: SCHB
+        type: broad
+      - symbol: SCHD
+        type: large
+      - symbol: SCHF
+        type: international
+      - symbol: SCHG
+        type: large
+      - symbol: SCHX
+        type: large
+    allocations:
+      fixed: 0
+      small: 25
+      medium: 0
+      large: 50
+      international: 15
+      broad: 10
+      cash: 1
+      stock: 0
+      crypto: 0
+  - name: Money Market
+    symbols:
+      - symbol: _cash
+        type: cash
+    allocations:
+      cash: 100
