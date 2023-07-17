@@ -1,4 +1,4 @@
-.PHONY: build run
+.PHONY: build run build-prod compress test coverage coverage-open
 
 build:
 	CGO_ENABLED=0 go build -v
@@ -8,6 +8,10 @@ build-prod:
 
 run:
 	./investment-balancer-v3
+
+compress-prod:
+	rm investment-balancer-v3-compressed
+	upx --best -o ./investment-balancer-v3-compressed investment-balancer-v3
 
 test:
 	go test ./...
