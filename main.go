@@ -15,6 +15,7 @@ import (
 
 	"investment-balancer-v3/balancer"
 	"investment-balancer-v3/config"
+	"investment-balancer-v3/helpers"
 	"investment-balancer-v3/models"
 
 	d "github.com/shopspring/decimal"
@@ -78,7 +79,10 @@ func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 
 	cached, ok := QuoteCache[symbol]
 	// cached symbols are good for 6 hours (I chose this randomly)
-	if ok && time.Unix(cached.Time, 0).Add(6*time.Hour).After(time.Now()) {
+	now := time.Now()
+	nowUnix := now.Unix()
+	isCached := helpers.IsWithin(cached.Time, nowUnix, 6*time.Hour)
+	if ok && isCached {
 		log.Printf("cached price for %v", symbol)
 		return cached.Price, true, nil
 	}
@@ -143,8 +147,7 @@ func main() {
 	}
 
 	conf.AssertValidConfig()
-
-	log.Println(conf)
+	log.Println("config is valid")
 
 	symbols := conf.GetAllSymbols()
 	quotes := []models.Quote{}
@@ -172,12 +175,17 @@ func main() {
 			continue
 		}
 
+		err = saveCache()
+		if err != nil {
+			log.Fatalf("symbol cache save failure: %v", err)
+		}
+
 		time.Sleep(1 * time.Second)
 	}
 
 	err = saveCache()
 	if err != nil {
-		log.Fatalf("symbol cache load failure: %v", err)
+		log.Fatalf("symbol cache save failure: %v", err)
 	}
 
 	// write CSV headers
@@ -238,5 +246,5 @@ func main() {
 		log.Fatalf("failed to write csv: %v", err.Error())
 	}
 
-	log.Printf("done: finished writing  to %v", conf.OutputFilename)
+	log.Printf("done: finished writing to %v", conf.OutputFilename)
 }
