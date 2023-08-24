@@ -27,3 +27,6 @@ investment-balancer-v3*
 config.yml
 .quotecache.json
 coverage.html
+
+release
+
