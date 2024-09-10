@@ -7,21 +7,17 @@ import (
 	"fmt"
 	"io"
 	"io/fs"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"time"
 
-	"investment-balancer-v3/balancer"
-	"investment-balancer-v3/config"
-	"investment-balancer-v3/helpers"
-	"investment-balancer-v3/models"
+	balancer "github.com/charles-m-knox/investment-balancer/pkg/balancer"
 
 	d "github.com/shopspring/decimal"
 )
 
-var QuoteCache map[string]models.CachedQuote
+var QuoteCache map[string]balancer.CachedQuote
 
 func loadCache() error {
 	_, err := os.Stat(".quotecache.json")
@@ -68,8 +64,8 @@ func saveCache() error {
 func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 	// special case: all cash allocations are instant
 	if symbol == "_cash" {
-		QuoteCache[symbol] = models.CachedQuote{
-			Quote: models.Quote{
+		QuoteCache[symbol] = balancer.CachedQuote{
+			Quote: balancer.Quote{
 				Symbol: "_cash",
 				Price:  d.NewFromInt(1),
 			},
@@ -81,7 +77,7 @@ func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 	// cached symbols are good for 6 hours (I chose this randomly)
 	now := time.Now()
 	nowUnix := now.Unix()
-	isCached := helpers.IsWithin(cached.Time, nowUnix, 6*time.Hour)
+	isCached := balancer.IsWithin(cached.Time, nowUnix, 6*time.Hour)
 	if ok && isCached {
 		log.Printf("cached price for %v", symbol)
 		return cached.Price, true, nil
@@ -99,14 +95,14 @@ func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 	}
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return d.Zero, false, err
 	}
 
 	log.Println(string(body))
 
-	var data models.StockData
+	var data balancer.StockData
 	err = json.Unmarshal(body, &data)
 	if err != nil {
 		return d.Zero, false, err
@@ -120,8 +116,8 @@ func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 	}
 
 	log.Printf("caching quote for symbol %v...", symbol)
-	QuoteCache[symbol] = models.CachedQuote{
-		Quote: models.Quote{
+	QuoteCache[symbol] = balancer.CachedQuote{
+		Quote: balancer.Quote{
 			Symbol: symbol,
 			Price:  price,
 		},
@@ -132,9 +128,9 @@ func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 }
 
 func main() {
-	QuoteCache = make(map[string]models.CachedQuote)
+	QuoteCache = make(map[string]balancer.CachedQuote)
 
-	conf, err := config.LoadConfig()
+	conf, err := balancer.LoadConfig()
 	if err != nil {
 		log.Fatalf("failed to load config: %v", err.Error())
 	}
@@ -150,7 +146,7 @@ func main() {
 	log.Println("config is valid")
 
 	symbols := conf.GetAllSymbols()
-	quotes := []models.Quote{}
+	quotes := []balancer.Quote{}
 
 	err = loadCache()
 	if err != nil {
@@ -166,7 +162,7 @@ func main() {
 
 		log.Printf("The latest price for %v is: %v\n", symbol, price)
 
-		quotes = append(quotes, models.Quote{
+		quotes = append(quotes, balancer.Quote{
 			Symbol: symbol,
 			Price:  price,
 		})

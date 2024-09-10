@@ -1,4 +1,4 @@
-package config
+package balancer
 
 import (
 	"fmt"
@@ -6,8 +6,6 @@ import (
 	"log"
 	"os"
 	"sort"
-
-	"investment-balancer-v3/models"
 
 	"gopkg.in/yaml.v3"
 )
@@ -17,10 +15,10 @@ const (
 )
 
 type Config struct {
-	OutputFilename     string            `yaml:"outputFilename"`
-	Strategies         []models.Strategy `yaml:"strategies"`
-	Accounts           []models.Account  `yaml:"accounts"`
-	AlphaVantageAPIKey string            `yaml:"alphaVantageApiKey"`
+	OutputFilename     string     `yaml:"outputFilename"`
+	Strategies         []Strategy `yaml:"strategies"`
+	Accounts           []Account  `yaml:"accounts"`
+	AlphaVantageAPIKey string     `yaml:"alphaVantageApiKey"`
 }
 
 func (c *Config) AssertValidConfig() {
@@ -70,7 +68,7 @@ func (conf *Config) GetAllSymbols() (symbols []string) {
 }
 
 // GetPortfolio attempts to retrieve a portfolio by name. If it cannot find one by the provided name, it will return an error.
-func (conf *Config) GetPortfolio(name string) (result models.Strategy, err error) {
+func (conf *Config) GetPortfolio(name string) (result Strategy, err error) {
 	for _, portfolio := range conf.Strategies {
 		if portfolio.Name == name {
 			return portfolio, nil

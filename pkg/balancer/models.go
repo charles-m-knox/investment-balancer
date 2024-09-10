@@ -1,4 +1,4 @@
-package models
+package balancer
 
 import (
 	"github.com/shopspring/decimal"

@@ -3,13 +3,10 @@ package balancer
 import (
 	"fmt"
 
-	"investment-balancer-v3/config"
-	"investment-balancer-v3/models"
-
 	"github.com/shopspring/decimal"
 )
 
-func BalanceAccount(conf config.Config, bal models.Account, quotes []models.Quote) (result map[string]map[string]models.Allocation, err error) {
+func BalanceAccount(conf Config, bal Account, quotes []Quote) (result map[string]map[string]Allocation, err error) {
 	// divide a balance according to the portfolio
 	portfolio, err := conf.GetPortfolio(bal.Strategy)
 	if err != nil {
@@ -20,12 +17,12 @@ func BalanceAccount(conf config.Config, bal models.Account, quotes []models.Quot
 	}
 
 	// first, group symbols according to their classification
-	groups := make(map[string]map[string]models.Allocation)
+	groups := make(map[string]map[string]Allocation)
 	for _, symbol := range portfolio.Symbols {
 		if groups[symbol.Type] == nil {
-			groups[symbol.Type] = make(map[string]models.Allocation)
+			groups[symbol.Type] = make(map[string]Allocation)
 		}
-		groups[symbol.Type][symbol.Symbol] = models.Allocation{}
+		groups[symbol.Type][symbol.Symbol] = Allocation{}
 	}
 
 	// now that we have all symbols grouped, proceed
@@ -60,7 +57,7 @@ func BalanceAccount(conf config.Config, bal models.Account, quotes []models.Quot
 				shares := allocPerSymbol.Div(quote.Price).Floor()
 				totalAllocated := shares.Mul(quote.Price)
 
-				groups[group][symbol] = models.Allocation{
+				groups[group][symbol] = Allocation{
 					Shares:                          shares.IntPart(), // will always be accurate due to earlier Floor()
 					SharePrice:                      quote.Price,
 					Remainder:                       allocPerSymbol.Sub(totalAllocated),

@@ -1,8 +1,10 @@
-package helpers
+package balancer_test
 
 import (
 	"testing"
 	"time"
+
+	balancer "github.com/charles-m-knox/investment-balancer/pkg/balancer"
 )
 
 func Test_IsWithin(t *testing.T) {
@@ -40,7 +42,7 @@ func Test_IsWithin(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			actual := IsWithin(test.start, test.end, test.durationFromStart)
+			actual := balancer.IsWithin(test.start, test.end, test.durationFromStart)
 			if test.expected != actual {
 				t.Fatalf("test.expected(%v) != actual(%v)", test.expected, actual)
 			}
