@@ -1,6 +1,6 @@
 module github.com/charles-m-knox/investment-balancer
 
-go 1.23.0
+go 1.23.4
 
 require (
 	github.com/shopspring/decimal v1.4.0

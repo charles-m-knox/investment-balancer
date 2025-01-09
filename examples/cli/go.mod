@@ -1,9 +1,9 @@
 module github.com/charles-m-knox/investment-balancer/examples/cli
 
-go 1.23.0
+go 1.23.4
 
 require (
-	github.com/charles-m-knox/investment-balancer v0.4.1
+	github.com/charles-m-knox/investment-balancer v0.5.0
 	github.com/shopspring/decimal v1.4.0
 )
 
