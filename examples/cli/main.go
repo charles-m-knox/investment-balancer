@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	balancer "github.com/charles-m-knox/investment-balancer/pkg/balancer"
@@ -72,6 +73,10 @@ func getLatestPrice(symbol string, apiKey string) (d.Decimal, bool, error) {
 			Time: time.Now().Unix(),
 		}
 	}
+
+	// supports duplicate symbols but in different allocations (i.e. SCHD__1,
+	// SCHD__2)
+	symbol = strings.Split(symbol, "__")[0]
 
 	cached, ok := QuoteCache[symbol]
 	// cached symbols are good for 6 hours (I chose this randomly)
