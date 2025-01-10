@@ -27,12 +27,15 @@ type Account struct {
 }
 
 type Allocation struct {
-	Shares                          int64
-	SharePrice                      decimal.Decimal
-	Remainder                       decimal.Decimal
-	TotalAllocated                  decimal.Decimal
-	IdealAllocation                 decimal.Decimal
-	IdealGroupAllocationPercentage  decimal.Decimal
+	Shares          int64
+	SharePrice      decimal.Decimal
+	Remainder       decimal.Decimal
+	TotalAllocated  decimal.Decimal
+	IdealAllocation decimal.Decimal
+	// The ideal allocation out of the total balance divided up for this group.
+	IdealGroupAllocationPercentage decimal.Decimal
+	// The ideal allocation out of the grand total balance for the entire
+	// account.
 	IdealSymbolAllocationPercentage decimal.Decimal
 }
 

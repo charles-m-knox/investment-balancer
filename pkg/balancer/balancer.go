@@ -2,6 +2,7 @@ package balancer
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/shopspring/decimal"
 )
@@ -50,7 +51,8 @@ func BalanceAccount(conf Config, bal Account, quotes []Quote) (result map[string
 		// of investment and find out how many shares to buy
 		for symbol := range symbols {
 			for _, quote := range quotes {
-				if quote.Symbol != symbol {
+				cleanedSymbol := strings.Split(symbol, "__")[0]
+				if cleanedSymbol != quote.Symbol {
 					continue
 				}
 
