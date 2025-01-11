@@ -4,14 +4,14 @@ build:
 	CGO_ENABLED=0 go build -v
 
 build-prod:
-	CGO_ENABLED=0 go build -v -o investment-balancer-v3-prod -ldflags="-w -s -buildid=" -trimpath
+	CGO_ENABLED=0 go build -v -o cli-prod -ldflags="-w -s -buildid=" -trimpath
 
 run:
-	./investment-balancer-v3
+	./cli
 
 compress-prod:
-	rm investment-balancer-v3-compressed
-	upx --best -o ./investment-balancer-v3-compressed investment-balancer-v3
+	rm cli-compressed
+	upx --best -o ./cli-compressed cli
 
 test:
 	go test ./...

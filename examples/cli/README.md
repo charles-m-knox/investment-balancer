@@ -1,6 +1,6 @@
 # Investment Balancer (CLI)
 
-Copy `config.example.yml` to `config.yml` and then run:
+Copy `config.example.json` to `config.json` and then run:
 
 ```bash
 make build && make run

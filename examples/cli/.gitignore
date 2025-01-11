@@ -1,6 +1,9 @@
 /.quotecache.json
 /config.yml
+/config.json
 /coverage.html
 /investment-balancer-v3
 /investment-balancer-v3-prod
 /investment-balancer-v3*
+/old
+/cli
