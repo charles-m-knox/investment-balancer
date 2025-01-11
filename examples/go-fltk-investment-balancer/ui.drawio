@@ -1,0 +1,148 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.1 Chrome/128.0.6613.186 Electron/32.2.6 Safari/537.36" version="25.0.1" pages="4">
+  <diagram name="Portrait - Symbols Page" id="0RD52IQTlSNer-iXqU8V">
+    <mxGraphModel dx="333" dy="199" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100" pageHeight="150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z5yRfcPKlrF_70fKLpRW-3" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Results&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="5" y="135" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="8FLul3RmQqJsgVnwLzIF-1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Delete Symbol&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="45" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="8FLul3RmQqJsgVnwLzIF-2" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="30" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="8FLul3RmQqJsgVnwLzIF-3" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;SPY - large&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (Dropdown)&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="10" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="8FLul3RmQqJsgVnwLzIF-4" value="Edit Symbols" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="1">
+          <mxGeometry x="5" y="3" width="35" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="8FLul3RmQqJsgVnwLzIF-5" value="Specify a group (broad, small ,etc)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="1">
+          <mxGeometry x="5" y="23" width="65" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="1jV2bGGQCBkg3lv9hiiW-1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Delete Allocation&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="105" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="1jV2bGGQCBkg3lv9hiiW-2" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="90" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="1jV2bGGQCBkg3lv9hiiW-3" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;large - 20%&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (Dropdown)&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="70" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="1jV2bGGQCBkg3lv9hiiW-4" value="Edit Allocations" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="1">
+          <mxGeometry x="5" y="63" width="40" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="1jV2bGGQCBkg3lv9hiiW-5" value="Specify percent of total" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="1">
+          <mxGeometry x="5" y="83" width="60" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="j_vokUOkC686ZsJ_bHLl-1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Total balance&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="120" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="j_vokUOkC686ZsJ_bHLl-2" value="Total Balance" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="1">
+          <mxGeometry x="5" y="122.5" width="35" height="5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Portrait - Results Page" id="E7D04W76XhBrBMtpfiMB">
+    <mxGraphModel dx="398" dy="238" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100" pageHeight="150" math="0" shadow="0">
+      <root>
+        <mxCell id="yD015IaZvoi19cbZ4Gn8-0" />
+        <mxCell id="yD015IaZvoi19cbZ4Gn8-1" parent="yD015IaZvoi19cbZ4Gn8-0" />
+        <mxCell id="yD015IaZvoi19cbZ4Gn8-2" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Text field containing CSV output&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="yD015IaZvoi19cbZ4Gn8-1" vertex="1">
+          <mxGeometry x="5" y="5" width="90" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="yD015IaZvoi19cbZ4Gn8-3" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Back&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="yD015IaZvoi19cbZ4Gn8-1" vertex="1">
+          <mxGeometry x="5" y="135" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="rbDwMxmSTIeX96XRoxww-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Submit&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="yD015IaZvoi19cbZ4Gn8-1" vertex="1">
+          <mxGeometry x="70" y="120" width="25" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="rbDwMxmSTIeX96XRoxww-1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;API Key field&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="yD015IaZvoi19cbZ4Gn8-1" vertex="1">
+          <mxGeometry x="5" y="120" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="76__U33HN0D9C9DDzxjQ-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Dark Mode&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="yD015IaZvoi19cbZ4Gn8-1" vertex="1">
+          <mxGeometry x="60" y="105" width="35" height="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Landscape - Symbols Page" id="hu3JUIqmjpX_kUt-p_n2">
+    <mxGraphModel dx="333" dy="199" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="150" pageHeight="100" math="0" shadow="0">
+      <root>
+        <mxCell id="rs7kPuL4gE1ZdYMg5D-P-0" />
+        <mxCell id="rs7kPuL4gE1ZdYMg5D-P-1" parent="rs7kPuL4gE1ZdYMg5D-P-0" />
+        <mxCell id="nEFSG4dHJOcH9Hn23hV1-3" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Results&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="rs7kPuL4gE1ZdYMg5D-P-1" vertex="1">
+          <mxGeometry x="5" y="85" width="140" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Delete Symbol&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="50" width="65" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="30" width="65" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-2" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;SPY - large&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (Dropdown)&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="10" width="65" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-3" value="Edit Symbols" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="3" width="35" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-5" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Delete Allocation&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="50" width="65" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-6" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="30" width="65" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-7" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;large - 20%&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (Dropdown)&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="10" width="65" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e2fTxfSRFLWCyP3RM5Nh-8" value="Edit Allocations" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="3" width="40" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="ed86HpwV4xgAm7E_12Hk-0" value="Specify a group (broad, small ,etc)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="23" width="65" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="ed86HpwV4xgAm7E_12Hk-2" value="Specify percent of total" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="23" width="60" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="I945E8-C_pJkBwLlYCuJ-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Total balance&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="45" y="70" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="I945E8-C_pJkBwLlYCuJ-1" value="Total Balance" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="15" y="72.5" width="35" height="5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Landscape - Results Page" id="_G9eotf4TStXUBJDju_4">
+    <mxGraphModel dx="398" dy="238" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="150" pageHeight="100" math="0" shadow="0">
+      <root>
+        <mxCell id="puuc-Xz1I1kAUAMb_GRp-0" />
+        <mxCell id="puuc-Xz1I1kAUAMb_GRp-1" parent="puuc-Xz1I1kAUAMb_GRp-0" />
+        <mxCell id="puuc-Xz1I1kAUAMb_GRp-5" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Back&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="puuc-Xz1I1kAUAMb_GRp-1" vertex="1">
+          <mxGeometry x="5" y="85" width="140" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="nC3SujT6_88CHgPVr-C6-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Text field containing CSV output&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="puuc-Xz1I1kAUAMb_GRp-1" vertex="1">
+          <mxGeometry x="5" y="5" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nC3SujT6_88CHgPVr-C6-1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Submit&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="puuc-Xz1I1kAUAMb_GRp-1" vertex="1">
+          <mxGeometry x="120" y="70" width="25" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="nC3SujT6_88CHgPVr-C6-2" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;API Key field&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="puuc-Xz1I1kAUAMb_GRp-1" vertex="1">
+          <mxGeometry x="5" y="70" width="110" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="w76Db6_fUcg_WbKegdhr-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Dark Mode&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="puuc-Xz1I1kAUAMb_GRp-1" vertex="1">
+          <mxGeometry x="110" y="55" width="35" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="0gB0bJihftf94XJd_ZLF-0" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Total balance&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="puuc-Xz1I1kAUAMb_GRp-1">
+          <mxGeometry x="5" y="55" width="55" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="0gB0bJihftf94XJd_ZLF-1" value="Total Balance" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=4;" vertex="1" parent="puuc-Xz1I1kAUAMb_GRp-1">
+          <mxGeometry x="5" y="48" width="35" height="5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

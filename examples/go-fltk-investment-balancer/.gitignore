@@ -1,0 +1,7 @@
+.*.bkp
+.flatpak-builder/
+/config.json
+/unused
+build/
+go-fltk-investment-balancer
+/investments.json
