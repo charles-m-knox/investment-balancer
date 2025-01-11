@@ -1,25 +1,15 @@
 package balancer
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/shopspring/decimal"
 )
 
-func BalanceAccount(conf Config, bal Account, quotes []Quote) (result map[string]map[string]Allocation, err error) {
-	// divide a balance according to the portfolio
-	portfolio, err := conf.GetPortfolio(bal.Strategy)
-	if err != nil {
-		return result, fmt.Errorf(
-			"failed to balance: %v",
-			err.Error(),
-		)
-	}
-
+func BalanceAccount(strategy Strategy, bal Account, quotes []Quote) (result map[string]map[string]Allocation, err error) {
 	// first, group symbols according to their classification
 	groups := make(map[string]map[string]Allocation)
-	for _, symbol := range portfolio.Symbols {
+	for _, symbol := range strategy.Symbols {
 		if groups[symbol.Type] == nil {
 			groups[symbol.Type] = make(map[string]Allocation)
 		}
@@ -29,7 +19,7 @@ func BalanceAccount(conf Config, bal Account, quotes []Quote) (result map[string
 	// now that we have all symbols grouped, proceed
 	// to apply the allocations
 	for group, symbols := range groups {
-		groupAllocation := portfolio.Allocations[group].Div(
+		groupAllocation := strategy.Allocations[group].Div(
 			decimal.NewFromInt(100),
 		).Mul(
 			bal.Balance,
@@ -38,7 +28,7 @@ func BalanceAccount(conf Config, bal Account, quotes []Quote) (result map[string
 		numSymbols := int64(len(symbols))
 		numSymbolsDec := decimal.NewFromInt(numSymbols)
 
-		allocPercentageFromTotal := portfolio.Allocations[group].Div(
+		allocPercentageFromTotal := strategy.Allocations[group].Div(
 			numSymbolsDec,
 		)
 
@@ -65,7 +55,7 @@ func BalanceAccount(conf Config, bal Account, quotes []Quote) (result map[string
 					Remainder:                       allocPerSymbol.Sub(totalAllocated),
 					TotalAllocated:                  totalAllocated,
 					IdealAllocation:                 allocPerSymbol,
-					IdealGroupAllocationPercentage:  portfolio.Allocations[group],
+					IdealGroupAllocationPercentage:  strategy.Allocations[group],
 					IdealSymbolAllocationPercentage: allocPercentageFromTotal,
 				}
 			}

@@ -1,7 +1,6 @@
 package balancer
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/shopspring/decimal"
@@ -22,29 +21,24 @@ func Test_BalanceAccount(t *testing.T) {
 		name     string
 		expected map[string]map[string]Allocation
 		err      error
-		conf     Config
+		strat    Strategy
 		bal      Account
 		quotes   []Quote
 	}{
 		{
 			name: "balances a simple strategy",
 			err:  nil,
-			conf: Config{
-				Strategies: []Strategy{
-					{
-						Name: testStrategy,
-						Symbols: []Symbol{
-							{"SCHX", "large"},
-							{"SCHB", "large"},
-							{"SCHD", "dividends"},
-						},
-						Allocations: map[string]decimal.Decimal{
-							"large":     percent50,
-							"dividends": percent50,
-						},
-					},
+			strat: Strategy{
+				Name: testStrategy,
+				Symbols: []Symbol{
+					{"SCHX", "large"},
+					{"SCHB", "large"},
+					{"SCHD", "dividends"},
 				},
-				Accounts: []Account{acct100},
+				Allocations: map[string]decimal.Decimal{
+					"large":     percent50,
+					"dividends": percent50,
+				},
 			},
 			quotes: []Quote{
 				{Symbol: "SCHD", Price: dollars25},
@@ -89,22 +83,17 @@ func Test_BalanceAccount(t *testing.T) {
 		{
 			name: "works with underscores in symbol names",
 			err:  nil,
-			conf: Config{
-				Strategies: []Strategy{
-					{
-						Name: testStrategy,
-						Symbols: []Symbol{
-							{"SCHD__1", "large"},
-							{"SCHB", "large"},
-							{"SCHD__2", "dividends"},
-						},
-						Allocations: map[string]decimal.Decimal{
-							"large":     percent50,
-							"dividends": percent50,
-						},
-					},
+			strat: Strategy{
+				Name: testStrategy,
+				Symbols: []Symbol{
+					{"SCHD__1", "large"},
+					{"SCHB", "large"},
+					{"SCHD__2", "dividends"},
 				},
-				Accounts: []Account{acct100},
+				Allocations: map[string]decimal.Decimal{
+					"large":     percent50,
+					"dividends": percent50,
+				},
 			},
 			quotes: []Quote{
 				{Symbol: "SCHD", Price: dollars25},
@@ -145,15 +134,11 @@ func Test_BalanceAccount(t *testing.T) {
 				},
 			},
 		},
-		{
-			name: "throws an error if the strategy isn't present",
-			err:  fmt.Errorf("failed to balance"),
-		},
 	}
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			actual, err := BalanceAccount(test.conf, test.bal, test.quotes)
+			actual, err := BalanceAccount(test.strat, test.bal, test.quotes)
 
 			if test.err == nil && err != nil {
 				t.Fatalf("test.err is nil but actual err occurred: %v", err.Error())

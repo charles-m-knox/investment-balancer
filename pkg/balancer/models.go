@@ -5,14 +5,14 @@ import (
 )
 
 type Symbol struct {
-	Symbol string `yaml:"symbol"`
-	Type   string `yaml:"type"`
+	Symbol string `json:"symbol"`
+	Type   string `json:"type"`
 }
 
 type Strategy struct {
-	Name        string                     `yaml:"name"`
-	Symbols     []Symbol                   `yaml:"symbols"`
-	Allocations map[string]decimal.Decimal `yaml:"allocations"`
+	Name        string                     `json:"name"`
+	Symbols     []Symbol                   `json:"symbols"`
+	Allocations map[string]decimal.Decimal `json:"allocations"`
 }
 
 type CachedQuote struct {
@@ -21,27 +21,27 @@ type CachedQuote struct {
 }
 
 type Account struct {
-	Name     string          `yaml:"name"`
-	Balance  decimal.Decimal `yaml:"balance"`
-	Strategy string          `yaml:"strategy"`
+	Name     string          `json:"name"`
+	Balance  decimal.Decimal `json:"balance"`
+	Strategy string          `json:"strategy"`
 }
 
 type Allocation struct {
-	Shares          int64
-	SharePrice      decimal.Decimal
-	Remainder       decimal.Decimal
-	TotalAllocated  decimal.Decimal
-	IdealAllocation decimal.Decimal
+	Shares          int64           `json:"shares" `
+	SharePrice      decimal.Decimal `json:"sharePrice" `
+	Remainder       decimal.Decimal `json:"remainder" `
+	TotalAllocated  decimal.Decimal `json:"totalAllocated" `
+	IdealAllocation decimal.Decimal `json:"idealAllocation" `
 	// The ideal allocation out of the total balance divided up for this group.
-	IdealGroupAllocationPercentage decimal.Decimal
+	IdealGroupAllocationPercentage decimal.Decimal `json:"idealGroupAllocationPercentage" `
 	// The ideal allocation out of the grand total balance for the entire
 	// account.
-	IdealSymbolAllocationPercentage decimal.Decimal
+	IdealSymbolAllocationPercentage decimal.Decimal `json:"idealSymbolAllocationPercentage" `
 }
 
 type Quote struct {
-	Symbol string
-	Price  decimal.Decimal
+	Symbol string          `json:"symbol" `
+	Price  decimal.Decimal `json:"price" `
 }
 
 type StockData struct {
